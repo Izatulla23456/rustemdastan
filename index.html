@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>«Рүстем – Дастан» ойын-викторинасы</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Serif:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef5f6;--ink:#12303b;--muted:#4f6b77;--card:#fff;--line:#c9dce1;--blue:#1f6f8b;--gold:#e8a33d;--red:#c8423a;--green:#2f8a55;--on-gold:#2a1c00;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d2128;--ink:#e6f0f3;--muted:#9bb5be;--card:#153039;--line:#28505c;--blue:#4aa6c6}}
+:root[data-theme="dark"]{--bg:#0d2128;--ink:#e6f0f3;--muted:#9bb5be;--card:#153039;--line:#28505c;--blue:#4aa6c6}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;color:var(--ink);font:400 17px/1.55 "Noto Sans",system-ui,sans-serif;background:radial-gradient(800px 380px at 90% -80px,color-mix(in srgb,var(--gold) 26%,transparent),transparent),radial-gradient(600px 420px at -10% 30%,color-mix(in srgb,var(--blue) 14%,transparent),transparent),var(--bg);background-attachment:fixed}
+h1,h2,h3{font-family:"Noto Serif",Georgia,serif;line-height:1.2;margin:0}
+.band{height:16px;background:linear-gradient(135deg,var(--gold) 25%,transparent 25%) -8px 0/16px 16px,linear-gradient(225deg,var(--gold) 25%,transparent 25%) -8px 0/16px 16px,var(--blue)}
+.wrap{max-width:880px;margin:0 auto;padding:20px 18px 60px}
+.hero{position:relative;padding:20px 0 22px}.hero>*{position:relative}
+.hero::after{content:"";position:absolute;right:-6px;top:50px;width:150px;height:150px;opacity:.55;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23e8a33d' stroke-width='3'%3E%3Cpath d='M50 4L96 50 50 96 4 50Z'/%3E%3Cpath d='M50 20L80 50 50 80 20 50Z'/%3E%3Ccircle cx='50' cy='50' r='7' fill='%231f6f8b' stroke='none'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat}
+@media (max-width:640px){.hero::after{display:none}}
+.hero h1{font-size:clamp(2rem,6.5vw,3.4rem);font-weight:800;max-width:14em}
+.hero p{max-width:34em;color:var(--muted);margin:14px 0 0}
+.who{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:5px 14px;font-size:.9rem}
+.total{margin-top:18px;font-weight:700}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;margin-bottom:10px}
+.ctl button{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px 14px;color:inherit;cursor:pointer;font-size:.9rem}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:26px}
+.mode{position:relative;overflow:hidden;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:22px;text-align:left;color:inherit;font:inherit;cursor:pointer;transition:border-color .15s,transform .15s,box-shadow .15s;box-shadow:0 10px 24px -16px rgba(18,48,59,.45)}
+.mode::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--c)}
+.mode:nth-child(1){--c:var(--blue)}.mode:nth-child(2){--c:var(--red)}.mode:nth-child(3){--c:var(--gold)}.mode:nth-child(4){--c:var(--green)}
+.mode:hover{transform:translateY(-2px);border-color:var(--c);box-shadow:0 20px 32px -18px rgba(18,48,59,.55)}
+.mode:active{transform:scale(.98)}
+.ic{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--c);color:#fff;font:800 1.3rem "Noto Serif",serif;margin-bottom:14px}
+.mode:nth-child(3) .ic{color:var(--on-gold)}
+.mode h2{font-size:1.25rem;margin-bottom:8px}.mode p{margin:0;color:var(--muted);font-size:.95rem}
+.mode .st{margin-top:14px;font-weight:700;color:var(--blue)}
+.learn{margin-top:34px;background:var(--card);border-radius:18px;padding:22px;border:1px solid var(--line)}
+.learn h2{font-size:1.25rem;margin-bottom:10px}.learn ul{margin:0;padding-left:1.2em}.learn li{margin:6px 0}
+button{font:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:12px 22px;font-weight:700;cursor:pointer;box-shadow:0 4px 0 rgba(0,0,0,.25);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-1px)}.btn:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line);box-shadow:none}
+.exit{padding:6px 14px;font-size:.9rem;border-radius:10px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px;font-weight:700}
+.pill{padding:4px 14px}
+.bar{height:12px;background:var(--line);border-radius:9px;overflow:hidden;margin-bottom:22px}
+.bar i{display:block;height:100%;width:100%;background:var(--gold);border-radius:9px;transition:background .3s}.bar i.low{background:var(--red)}
+.q{font:800 clamp(1.3rem,4.5vw,1.9rem)/1.25 "Noto Serif",serif;margin-bottom:22px}
+.opts{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;border:0;border-radius:14px;padding:18px;color:#fff;font-weight:700;cursor:pointer;min-height:68px;box-shadow:0 5px 0 rgba(0,0,0,.28);transition:transform .12s,box-shadow .12s,opacity .25s}
+.opt b{font-size:1.4rem;width:1.5em;flex:none}
+.o0{background:var(--red)}.o1{background:var(--blue)}.o2{background:var(--gold);color:var(--on-gold)}.o3{background:var(--green)}
+.opt:hover:not(:disabled){transform:translateY(-2px)}.opt:active:not(:disabled){transform:translateY(4px);box-shadow:0 1px 0 rgba(0,0,0,.28)}
+.opt:disabled{cursor:default}.opt.dim{opacity:.35}.opt.ok{outline:4px solid var(--ink);animation:pulse .5s}.opt.wrong{animation:shake .4s;opacity:.55}
+.opts.tf .opt{justify-content:center;font-size:1.3rem}
+@keyframes pulse{50%{transform:scale(1.04)}}@keyframes shake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.fb{margin-top:20px;padding:16px 18px;border-radius:14px;background:var(--card);border-left:6px solid var(--gold);animation:rise .35s cubic-bezier(.2,.7,.2,1)}
+.fb.good{border-color:var(--green)}.fb.bad{border-color:var(--red)}.fb p{margin:4px 0 14px}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.hint{color:var(--muted);font-size:.85rem;margin-top:18px}
+.mt{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mt button{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px;color:inherit;text-align:left;cursor:pointer;font-size:.95rem;transition:transform .12s,border-color .15s,background .2s}
+.mt button:hover:not(.done){transform:translateY(-1px);border-color:var(--blue)}
+.mt button.sel{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 25%,var(--card))}
+.mt button.done{border-color:var(--green);background:color-mix(in srgb,var(--green) 22%,var(--card));cursor:default;animation:pulse .45s}
+.mt button.no{border-color:var(--red);animation:shake .4s}
+.fc{display:block;width:100%;max-width:560px;height:280px;margin:10px auto 18px;perspective:1000px;background:none;border:0;padding:0;color:inherit;cursor:pointer}
+.fc .in{position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}.fc.flip .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;display:grid;place-items:center;padding:26px;border-radius:20px;border:2px solid var(--line);background:var(--card);text-align:center;box-shadow:0 14px 28px -18px rgba(18,48,59,.5)}
+.face.f{font:800 1.6rem "Noto Serif",serif}.face.b{transform:rotateY(180deg);background:var(--blue);color:#fff;border-color:var(--blue);font-weight:600}
+.face small{position:absolute;bottom:12px;font-size:.8rem;opacity:.65;font-weight:400;font-family:"Noto Sans",sans-serif}
+.nav{display:flex;gap:12px;justify-content:center}
+.res{text-align:center;padding:30px 0}.res h2{font-size:2rem}
+.res .pts{font:800 4rem "Noto Serif",serif;color:var(--blue)}
+.row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.rev{text-align:left;margin:26px auto 0;max-width:640px}.rev h3{margin-bottom:6px}
+.rev .w{background:var(--card);border-left:6px solid var(--red);border-radius:12px;padding:12px 16px;margin:10px 0}.rev p{margin:4px 0}
+.modal{position:fixed;inset:0;background:rgba(10,25,30,.6);display:grid;place-items:center;z-index:60;padding:20px}
+.modal>div{background:var(--card);border-radius:18px;padding:26px;max-width:380px;text-align:center;animation:rise .25s}.modal p{margin:0 0 6px;font-weight:700}
+.cf{position:fixed;top:-14px;width:9px;height:14px;border-radius:2px;z-index:50;pointer-events:none;animation:fall 3s linear forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(720deg)}}
+@media (max-width:520px){.mt{gap:8px}.mt button{padding:10px;font-size:.88rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="band"></div>
+<main class="wrap" id="app"></main>
+<script>
+const $=s=>document.querySelector(s),app=$('#app');
+const sh=a=>[...a].map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+const SH=['▲','◆','●','■'];
+let lang='kk',T=20,snd=true,total=0,best={},kb=null,ac;
+const X=(k,r)=>lang==='kk'?k:r,d=p=>p[lang==='kk'?0:1];
+
+// ДЕРЕКТЕР / ДАННЫЕ: [[kk,ru],[kk,ru]]
+const PAIRS=[
+[['Тұрмағанбет Ізтілеуұлы','Турмағанбет Изтілеуұлы'],['Сыр бойы ақындар мектебінің өкілі, ақын, аудармашы','Представитель сырдарьинской школы поэтов, поэт и переводчик']],
+[['«Рүстем – Дастан»','«Рүстем – Дастан»'],['Фирдаусидің «Шаһнама» поэмасы желісімен жазылған туынды','Произведение по мотивам поэмы Фирдоуси «Шахнаме»']],
+[['Әбубәкір Фирдауси','Фирдоуси'],['Парсы классигі, «Шаһнаманың» авторы','Персидский классик, автор «Шахнаме»']],
+[['Цифрлық гуманитарлық ғылымдар','Цифровые гуманитарные науки'],['Заманауи білім беру мен әдеби мұраны ұштастыру бағыты','Направление, соединяющее современное образование и литературное наследие']],
+[['Canva / Wordwall','Canva / Wordwall'],['Интерактивті тапсырмалар мен цифрлық өнім жасау құралдары','Инструменты для создания интерактивных заданий и цифровых продуктов']],
+[['«Шаһнама»','«Шахнаме»'],['Парсы тіліндегі ұлы эпикалық туынды, шығыс әдебиетінің інжу-маржаны','Великий эпос на персидском языке, жемчужина восточной литературы']],
+[['Рүстем','Рустам'],['«Шаһнаманың» басты батыры, ерлік пен елдіктің символы','Главный герой «Шахнаме», символ мужества и верности народу']],
+[['Сыр бойы','Побережье Сырдарьи'],['Сырдария өзені бойындағы өңір, ақындық дәстүрдің ежелгі ордасы','Край вдоль реки Сырдарьи, давний центр поэтической традиции']]];
+
+// [сұрақ, 0=дұрыс 1=бұрыс, түсініктеме]
+const TF=[
+[['Тұрмағанбет Ізтілеуұлы — Жетісу өңірінің ақыны.','Турмағанбет Изтілеуұлы — поэт Жетысуского края.'],1,['Ол — Сыр бойы ақындар мектебінің өкілі.','Он — представитель сырдарьинской школы поэтов.']],
+[['«Рүстем – Дастан» поэмасының негізгі идеясы — елдік пен ерлікті дәріптеу.','Основная идея поэмы «Рүстем – Дастан» — воспевание мужества и единства народа.'],0,['Дастан батырлықты, ел қорғау ұғымын жырлайды.','Дастан воспевает героизм и защиту родной земли.']],
+[['Ақын тек сөзбе-сөз аударма жасап қойған жоқ, оны қазақы дүниетаныммен байытты.','Поэт не просто перевёл слово в слово, а обогатил текст казахским мировоззрением.'],0,['Бұл — шығармашылық аударма: қазақ оқырманына жақын тіл мен образдар қосылған.','Это творческий перевод: добавлены язык и образы, близкие казахскому читателю.']],
+[['Цифровизация әдеби мұраны оқытуда ешқандай рөл атқармайды.','Цифровизация не играет никакой роли в изучении литературного наследия.'],1,['Цифрлық құралдар мұраны оқушыға қызықты әрі түсінікті жеткізеді.','Цифровые инструменты делают наследие интересным и понятным ученику.']],
+[['Wordwall платформасы интерактивті квиздер мен викториналар құруға арналған.','Платформа Wordwall предназначена для создания интерактивных квизов и викторин.'],0,['Онда сәйкестендіру, квиз, сөз ойындары және т.б. жасауға болады.','На ней можно делать сопоставления, квизы, игры со словами и т.д.']],
+[['«Шаһнама» — парсы тілінде жазылған эпикалық туынды.','«Шахнаме» — эпическое произведение, написанное на персидском языке.'],0,['Фирдауси оны парсы тілінде жазған.','Фирдоуси написал его на персидском языке.']],
+[['Әбубәкір Фирдауси — қазақ ақыны.','Фирдоуси — казахский поэт.'],1,['Фирдауси — парсы классигі.','Фирдоуси — классик персидской литературы.']],
+[['Canva-да көрнекі материалдар мен презентациялар жасауға болады.','В Canva можно создавать наглядные материалы и презентации.'],0,['Canva — дизайн мен көрнекілік жасаудың ыңғайлы құралы.','Canva — удобный инструмент для дизайна и наглядных материалов.']],
+[['Сыр бойы — Сырдария өзенінің бойындағы өңір.','Сыр бойы — край вдоль реки Сырдарьи.'],0,['Атауының өзі өзеннен шыққан.','Название происходит от названия реки.']],
+[['Рүстем — қазақ халық ертегісінің кейіпкері.','Рустам — герой казахской народной сказки.'],1,['Рүстем — «Шаһнаманың» батыры, ал Тұрмағанбет оны қазақ оқырманына жырмен жеткізді.','Рустам — герой «Шахнаме», а Турмағанбет донёс его до казахского читателя в стихах.']],
+[['Фирдауси «Шаһнаманы» араб тілінде жазды.','Фирдоуси написал «Шахнаме» на арабском языке.'],1,['«Шаһнама» парсы тілінде жазылған.','«Шахнаме» написана на персидском языке.']],
+[['Интерактивті ойындар оқушының қызығушылығын арттыра алады.','Интерактивные игры могут повысить интерес ученика.'],0,['Ойын форматы материалды жылдам әрі жеңіл меңгертеді.','Игровой формат помогает усваивать материал быстрее и легче.']]];
+
+// [сұрақ,[нұсқалар],дұрыс индекс,түсініктеме]
+const QZ=[
+[['Тұрмағанбет Ізтілеуұлы қай өңірдің тумасы?','Уроженцем какого края был Турмағанбет Изтілеуұлы?'],[['Жетісу','Жетысу'],['Сыр бойы','Сыр бойы'],['Арқа','Арка']],1,['Ол — Сыр бойының ақыны.','Он — поэт Сыр бойы.']],
+[['«Рүстем – Дастан» қай шығыс поэмасының желісімен жазылған?','По мотивам какой восточной поэмы написан «Рүстем – Дастан»?'],[['«Шаһнама»','«Шахнаме»'],['«Ләйлі – Мәжнүн»','«Лейли и Меджнун»'],['«Жүсіп – Зылиха»','«Юсуф и Зулейха»']],0,['Негіз — Фирдаусидің «Шаһнамасы».','Основа — «Шахнаме» Фирдоуси.']],
+[['Оқушылардың әдебиетке қызығушылығын арттыру үшін нені қолданған тиімді?','Что эффективнее использовать, чтобы повысить интерес школьников к литературе?'],[['Тек қағаз кітаптарды','Только бумажные книги'],['Интерактивті цифрлық платформаларды','Интерактивные цифровые платформы'],['Газеттерді','Газеты']],1,['Ойын форматы қызығушылықты арттырады.','Игровой формат повышает интерес.']],
+[['Фирдауси «Шаһнаманы» қай тілде жазды?','На каком языке Фирдоуси написал «Шахнаме»?'],[['Араб тілінде','На арабском'],['Түрік тілінде','На тюркском'],['Парсы тілінде','На персидском']],2,['«Шаһнама» — парсы әдебиетінің ірі шыңы.','«Шахнаме» — вершина персидской литературы.']],
+[['«Шаһнаманың» авторы кім?','Кто автор «Шахнаме»?'],[['Низами','Низами'],['Фирдауси','Фирдоуси'],['Науаи','Навои']],1,['Авторы — парсы классигі Фирдауси.','Автор — персидский классик Фирдоуси.']],
+[['Цифрлық гуманитарлық ғылымдар нені ұштастырады?','Что объединяют цифровые гуманитарные науки?'],[['Спорт пен музыканы','Спорт и музыку'],['Гуманитарлық мұра мен цифрлық технологияны','Гуманитарное наследие и цифровые технологии'],['Математика мен химияны','Математику и химию']],1,['Мысалы, әдеби мұраны онлайн ойын арқылы оқыту.','Например, изучение литературы через онлайн-игры.']],
+[['Тұрмағанбет Ізтілеуұлының аудармасын не ерекшелейді?','Что отличает перевод Турмағанбета Изтілеуұлы?'],[['Сөзбе-сөз көшірме болуы','Дословность'],['Қазақы дүниетаныммен байытылуы','Обогащение казахским мировоззрением'],['Тек қысқартылуы','Только сокращение текста']],1,['Ол мазмұнды қазақ оқырманына жақын етіп жеткізді.','Он передал содержание близко казахскому читателю.']],
+[['Wordwall-да қай тапсырма түрін жасауға болады?','Какой тип заданий можно создать в Wordwall?'],[['Сәйкестендіру','Сопоставление'],['Тек бейнетаспа','Только видеоролик'],['Тек сурет салу','Только рисунок']],0,['Сәйкестендіру, викторина, «Дұрыс/Бұрыс» — бәрі бар.','Сопоставление, викторина, «Верно/Неверно» — всё есть.']],
+[['Сыр бойы ақындар мектебі қай өзенмен байланысты?','С какой рекой связана сырдарьинская школа поэтов?'],[['Ертіс','Иртыш'],['Жайық','Жайык'],['Сырдария','Сырдарья']],2,['Сыр бойы — Сырдарияның бойы.','Сыр бойы — побережье Сырдарьи.']],
+[['Рақш — кім?','Кто такой Рахш?'],[['Рүстемнің тұлпары','Конь Рустама'],['Ақынның бауыры','Брат поэта'],['Өзеннің атауы','Название реки']],0,['Рақш — Рүстемнің атақты тұлпары.','Рахш — знаменитый конь Рустама.']],
+[['Canva қандай мақсатқа жиі қолданылады?','Для чего чаще всего применяют Canva?'],[['Тек есептеуге','Только для вычислений'],['Көрнекі материал мен презентация жасауға','Для наглядных материалов и презентаций'],['Тек музыка тыңдауға','Только для прослушивания музыки']],1,['Canva — дизайн жасауға арналған құрал.','Canva — инструмент для создания дизайна.']],
+[['«Рүстем – Дастан» қандай идеяны дәріптейді?','Какую идею воспевает «Рүстем – Дастан»?'],[['Тек сауданы','Только торговлю'],['Елдік пен ерлікті','Единство и мужество народа'],['Тек табиғатты','Только природу']],1,['Басты идея — елдік пен ерлік.','Главная идея — единство и мужество.']]];
+
+// ДЫБЫС / ЗВУК
+function beep(f){if(!snd)return;try{ac=ac||new AudioContext();f.forEach((h,i)=>{const o=ac.createOscillator(),g=ac.createGain(),s=ac.currentTime+i*.12;o.frequency.value=h;g.gain.setValueAtTime(.12,s);g.gain.exponentialRampToValueAtTime(.001,s+.2);o.connect(g);g.connect(ac.destination);o.start(s);o.stop(s+.22)})}catch(e){}}
+function confetti(){const c=['#e8a33d','#1f6f8b','#c8423a','#2f8a55'];for(let i=0;i<46;i++){const e=document.createElement('i');e.className='cf';e.style.cssText=`left:${Math.random()*100}vw;background:${c[i%4]};animation-delay:${Math.random()*.6}s;animation-duration:${2+Math.random()*1.6}s`;document.body.append(e);setTimeout(()=>e.remove(),4500)}}
+// ШЫҒУДЫ РАСТАУ / ПОДТВЕРЖДЕНИЕ ВЫХОДА
+function ask(ok,pause,resume){const m=document.createElement('div');m.className='modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');
+ m.innerHTML=`<div><p>${X('Прогресс сақталмайды.','Прогресс не сохранится.')}</p><p>${X('Шынымен шығасың ба?','Точно выйти?')}</p><div class="row"><button class="btn alt" id="n">${X('Қалу','Остаться')}</button><button class="btn" id="y">${X('Шығу','Выйти')}</button></div></div>`;
+ document.body.append(m);pause&&pause();$('#n').focus();$('#n').onclick=()=>{m.remove();resume&&resume()};$('#y').onclick=()=>{m.remove();ok()}}
+// ПЕРНЕТАҚТА / КЛАВИАТУРА
+document.addEventListener('keydown',e=>{if(kb&&!$('.modal')&&kb(e))e.preventDefault()});
+
+function home(){kb=null;document.documentElement.lang=lang;
+ const M=[['study','⟲',X('Оқу','Изучение'),X('Ойынға дейін флеш-карточкалармен материалды оқып шық.','Перед игрой изучи материал по флеш-карточкам.')],
+ ['match','⇄',X('Сәйкестендіру','Сопоставление'),X('Ұғымды анықтамасымен жұптастыр. 6 жұп.','Сопоставь понятие с определением. 6 пар.')],
+ ['tf','✓',X('Дұрыс немесе бұрыс','Верно или неверно'),X(`8 тұжырым, әрқайсысына ${T} секунд.`,`8 утверждений, по ${T} секунд на каждое.`)],
+ ['quiz','?',X('Викторина','Викторина'),X(`8 сұрақ, жылдам жауапқа көбірек ұпай. ${T} секунд.`,`8 вопросов, чем быстрее ответ, тем больше очков. ${T} секунд.`)]];
+ app.innerHTML=`<div class="ctl"><button id="lg" aria-label="Language">${lang==='kk'?'ҚАЗ → РУС':'РУС → ҚАЗ'}</button><button id="sd">${snd?'🔊':'🔇'} ${X('Дыбыс','Звук')}</button><button id="tm">⏱ ${T} ${X('сек','сек')}</button></div>
+ <section class="hero"><h1>${X('«Рүстем – Дастан» жолымен: ойын-викторина','По следам «Рүстем – Дастан»: игра-викторина')}</h1>
+ <p>${X('Сыр бойы ақыны Тұрмағанбет Ізтілеуұлы мен оның «Шаһнама» желісімен жазылған дастаны туралы ойындарда біліміңді сына.','Проверь знания о сырдарьинском поэте Турмағанбете Изтілеуұлы и его дастане по мотивам «Шахнаме».')}</p>
+ <div class="who"><span class="chip">${X('Ақын','Поэт')}</span><span class="chip">${X('Аудармашы','Переводчик')}</span><span class="chip">${X('Сыр бойы мектебі','Школа Сыр бойы')}</span></div>
+ <div class="total">${X('Жалпы ұпай','Всего очков')}: ${total}</div></section>
+ <div class="grid">${M.map(m=>`<button class="mode" data-g="${m[0]}"><div class="ic" aria-hidden="true">${m[1]}</div><h2>${m[2]}</h2><p>${m[3]}</p><div class="st">${best[m[0]]!=null?X('Ең жақсы нәтиже','Лучший результат')+': '+best[m[0]]:m[0]==='study'?'':X('Әлі ойналмады','Ещё не играли')}</div></button>`).join('')}</div>
+ <section class="learn"><h2>${X('Ойын алдында біліп ал','Прочитай перед игрой')}</h2><ul>
+ <li>${X('Тұрмағанбет Ізтілеуұлы — Сыр бойы ақындар мектебінің өкілі, ақын әрі аудармашы.','Турмағанбет Изтілеуұлы — представитель сырдарьинской школы поэтов, поэт и переводчик.')}</li>
+ <li>${X('«Рүстем – Дастан» — Фирдаусидің «Шаһнамасының» желісімен жазылған туынды.','«Рүстем – Дастан» — произведение по мотивам «Шахнаме» Фирдоуси.')}</li>
+ <li>${X('Ақын шығыс сюжетін қазақы дүниетаныммен байытып, ел мен ерлікті дәріптеді.','Поэт обогатил восточный сюжет казахским мировоззрением и воспел мужество и единство народа.')}</li>
+ <li>${X('Цифрлық құралдар (Canva, Wordwall) әдеби мұраны оқушыға жақындатады.','Цифровые инструменты (Canva, Wordwall) делают литературное наследие ближе к ученику.')}</li></ul></section>`;
+ $('#lg').onclick=()=>{lang=lang==='kk'?'ru':'kk';home()};
+ $('#sd').onclick=()=>{snd=!snd;beep([660]);home()};
+ $('#tm').onclick=()=>{T=T===10?20:T===20?30:10;home()};
+ app.querySelectorAll('.mode').forEach(b=>b.onclick=()=>({study,match,tf:()=>run('tf'),quiz:()=>run('quiz')})[b.dataset.g]());
+}
+
+const topBar=(mid,right,has,pause,resume,stop)=>`<div class="top"><button class="btn alt exit" id="ex">← ${X('Шығу','Выйти')}</button><span>${mid}</span><span>${right}</span></div>`;
+function wireExit(has,pause,resume,stop){$('#ex').onclick=()=>{const out=()=>{stop&&stop();home()};has()?ask(out,pause,resume):out()}}
+
+function finish(k,score,ok,n,wr,note){kb=null;total+=score;if(best[k]==null||score>best[k])best[k]=score;beep([523,659,784]);
+ app.innerHTML=`<div class="res"><h2>${X('Аяқталды!','Готово!')}</h2><div class="pts" id="pts">0</div><p>${ok} / ${n} ${X('дұрыс жауап','правильных ответов')}${note?'. '+note:''}</p>
+ ${wr.length?`<section class="rev"><h3>${X('Қателерді талдау','Разбор ошибок')}</h3>${wr.map(w=>`<div class="w"><strong>${w.q}</strong><p>${X('Дұрыс жауап','Правильный ответ')}: <b>${w.a}</b></p><p>${w.e}</p></div>`).join('')}</section>`:k==='match'?'':`<p>${X('Бірде-бір қате жоқ!','Ни одной ошибки!')}</p>`}
+ <div class="row"><button class="btn" id="again">${X('Қайта ойнау','Играть снова')}</button><button class="btn alt" id="hm">${X('Басты бет','На главную')}</button></div></div>`;
+ $('#again').onclick=()=>k==='match'?match():run(k);$('#hm').onclick=home;
+ const p=$('#pts'),s0=performance.now();(function f(n){const r=Math.min(1,(n-s0)/900);p.textContent=Math.round(score*(1-Math.pow(1-r,3)));if(r<1)requestAnimationFrame(f)})(s0);
+ if(score>0&&!matchMedia('(prefers-reduced-motion:reduce)').matches)confetti();
+}
+
+function study(){let i=0;const c=sh(PAIRS);
+ kb=e=>{if(e.key==='ArrowRight'){go(1);return 1}if(e.key==='ArrowLeft'){go(-1);return 1}if(e.key==='Escape'){home();return 1}};
+ function go(s){const n=i+s;if(n<0)return;if(n>=c.length){home();return}i=n;draw()}
+ function draw(){app.innerHTML=`${topBar(`${i+1} / ${c.length}`,'')}
+ <button class="fc" id="fc" aria-label="${X('Картаны аудару','Перевернуть карточку')}"><div class="in"><div class="face f">${d(c[i][0])}<small>${X('Анықтаманы көру үшін бас','Нажми, чтобы увидеть определение')}</small></div><div class="face b">${d(c[i][1])}</div></div></button>
+ <div class="nav"><button class="btn alt" id="pv" ${i?'':'disabled'}>←</button><button class="btn" id="nx">${i===c.length-1?X('Аяқтау','Завершить'):X('Келесі','Далее')} →</button></div>
+ <p class="hint">${X('← → — ауысу, Enter — аудару, Esc — шығу','← → — переключение, Enter — перевернуть, Esc — выход')}</p>`;
+ $('#fc').onclick=()=>$('#fc').classList.toggle('flip');$('#pv').onclick=()=>go(-1);$('#nx').onclick=()=>go(1);$('#ex').onclick=home}
+ draw();
+}
+
+function match(){const P=sh(PAIRS).slice(0,6);let sel=null,miss=0,got=0;kb=null;
+ const L=sh(P.map((p,x)=>[d(p[0]),x])),R=sh(P.map((p,x)=>[d(p[1]),x]));
+ app.innerHTML=`${topBar(X('Жұптарды тап','Найди пары'),`<span id="ms">${X('Қате','Ошибок')}: 0</span>`)}<p style="color:var(--muted);margin:0 0 16px">${X('Сол жақтан ұғымды, оң жақтан оның анықтамасын таңда.','Слева выбери понятие, справа — его определение.')}</p>
+ <div class="mt"><div style="display:grid;gap:10px" id="l"></div><div style="display:grid;gap:10px" id="r"></div></div>`;
+ const mk=(a,el,s)=>a.forEach(([t,x])=>{const b=document.createElement('button');b.textContent=t;b.dataset.x=x;b.dataset.s=s;b.onclick=()=>pick(b);$(el).append(b)});
+ mk(L,'#l','l');mk(R,'#r','r');wireExit(()=>got>0||miss>0);
+ function pick(b){if(b.classList.contains('done'))return;
+  if(!sel||sel.dataset.s===b.dataset.s){if(sel)sel.classList.remove('sel');sel=b;b.classList.add('sel');return}
+  const a=sel;a.classList.remove('sel');sel=null;
+  if(a.dataset.x===b.dataset.x){a.className=b.className='done';got++;beep([660,880]);if(got===P.length)setTimeout(()=>finish('match',Math.max(0,P.length*100-miss*25),P.length,P.length,[],X('Қате саны','Ошибок')+': '+miss),500)}
+  else{miss++;beep([220,180]);$('#ms').textContent=X('Қате','Ошибок')+': '+miss;[a,b].forEach(z=>z.classList.add('no'));setTimeout(()=>[a,b].forEach(z=>z.classList.remove('no')),600)}}
+}
+
+function run(k){
+ const items=sh(k==='tf'?TF:QZ).slice(0,8).map(r=>k==='tf'?{q:d(r[0]),o:[X('Дұрыс','Верно'),X('Бұрыс','Неверно')],a:r[1],e:d(r[2])}:{q:d(r[0]),o:r[1].map(d),a:r[2],e:d(r[3])});
+ let i=0,score=0,ok=0,st=0,left,t,paused=false,done=false;const wr=[];
+ kb=e=>{if(/^[1-4]$/.test(e.key)){const b=app.querySelectorAll('.opt')[+e.key-1];if(b&&!b.disabled){b.click();return 1}}
+  if(e.key==='Enter'&&document.activeElement.tagName!=='BUTTON'){const n=$('#nx');if(n){n.click();return 1}}
+  if(e.key==='Escape'){$('#ex').click();return 1}};
+ function show(){const it=items[i];left=T;done=false;const od=k==='tf'?[0,1]:sh(it.o.map((_,x)=>x));
+  app.innerHTML=`${topBar(`${i+1} / ${items.length}`,`<span class="chip pill">${st>1?'🔥 '+st+' · ':''}${X('Ұпай','Очки')}: ${score}</span>`)}
+  <div class="bar" role="progressbar" aria-label="${X('Уақыт','Время')}"><i id="tb"></i></div><div class="q">${it.q}</div>
+  <div class="opts ${k}" role="group">${od.map((x,p)=>`<button class="opt o${k==='tf'?(x?0:1):p}" data-x="${x}"><b aria-hidden="true">${SH[k==='tf'?(x?0:1):p]}</b>${it.o[x]}</button>`).join('')}</div>
+  <div id="fb" aria-live="polite"></div><p class="hint">${X('1–'+od.length+' — жауап, Enter — келесі, Esc — шығу','1–'+od.length+' — ответ, Enter — далее, Esc — выход')}</p>`;
+  app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(+b.dataset.x));
+  wireExit(()=>i>0||done,()=>paused=true,()=>paused=false,()=>clearInterval(t));
+  clearInterval(t);t=setInterval(()=>{if(paused)return;left-=.1;const b=$('#tb');b.style.width=Math.max(0,left/T*100)+'%';b.classList.toggle('low',left<6);if(left<=0)answer(-1)},100)}
+ function answer(x){if(done)return;done=true;clearInterval(t);const it=items[i],g=x===it.a;
+  if(g){ok++;st++;score+=100+Math.round(Math.max(0,left)/T*100)+Math.min(st-1,5)*10;beep([660,880])}else{st=0;wr.push({q:it.q,a:it.o[it.a],e:it.e});beep([220,180])}
+  app.querySelectorAll('.opt').forEach(b=>{b.disabled=true;const v=+b.dataset.x;b.classList.add(v===it.a?'ok':v===x?'wrong':'dim')});
+  const last=i===items.length-1;
+  $('#fb').innerHTML=`<div class="fb ${g?'good':'bad'}"><strong>${g?X('Дұрыс!','Верно!'):x<0?X('Уақыт бітті.','Время вышло.'):X('Бұрыс.','Неверно.')}</strong><p>${it.e}${g&&st>2?' '+X('Қатарынан '+st+' дұрыс жауап!','Уже '+st+' правильных подряд!'):''}</p><button class="btn" id="nx">${last?X('Нәтижені көру','Показать результат'):X('Келесі','Далее')}</button></div>`;
+  $('#nx').focus();$('#nx').onclick=()=>last?finish(k,score,ok,items.length,wr):(i++,show())}
+ show();
+}
+
+new MutationObserver(()=>{if(!matchMedia('(prefers-reduced-motion:reduce)').matches)app.animate([{opacity:0,transform:'translateY(16px)'},{opacity:1,transform:'none'}],{duration:380,easing:'cubic-bezier(.2,.7,.2,1)'})}).observe(app,{childList:true});
+home();
+</script>
+</body>
+</html>
